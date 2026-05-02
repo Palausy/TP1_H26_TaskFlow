@@ -3,10 +3,281 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>formulaire</title>
         <link rel="stylesheet" href="css/style.css" />
     </head>
     <body>
         <h1>HELLO WORD GITHUB</h1>
+        <form
+            action="reservationFormSend.html"
+            method="get"
+            id="frm-reservation"
+        >
+            <!-- INFORMATION PERSONNELLES N*1____________________________________________________________________ -->
+            <fieldset>
+                <legend>FORMULAIRE</legend>
+                <fieldset>
+                    <legend>Informations personnelles</legend>
+                    <div>
+                        <div>
+                            <label for="txt-prenom">
+                                Votre prénom
+                                <strong>*</strong>
+                            </label>
+                            <input
+                                type="text"
+                                id="txt-prenom"
+                                name="prenom"
+                                maxlength="20"
+                                required
+                            />
+                        </div>
+
+                        <div>
+                            <label for="txt-nom">
+                                Votre nom de famille
+                                <strong>*</strong>
+                            </label>
+                            <input
+                                type="text"
+                                id="txt-nom"
+                                name="nom"
+                                maxlength="20"
+                                required
+                            />
+                        </div>
+                        <div>
+                            <label for="contact-email"
+                                >Email <strong>*</strong></label
+                            >
+                            <input
+                                type="email"
+                                id="contact-email"
+                                name="email"
+                                placeholder="adresse@email.com"
+                                required
+                            />
+                        </div>
+
+                        <div>
+                            <label for="txt-num"> Votre numéro </label>
+                            <input
+                                type="tel"
+                                id="txt-num"
+                                name="telephone"
+                                minlength="10"
+                                maxlength="12"
+                                placeholder="facultatf"
+                            />
+                        </div>
+                        <div>
+                            <label for="dob"
+                                >Date de naissance <strong>*</strong></label
+                            >
+                            <input
+                                type="date"
+                                id="dob"
+                                name="dob"
+                                required
+                                max="2026-05-02"
+                                required
+                            />
+                        </div>
+                    </div>
+                </fieldset>
+                <!-- INFORMATION DE L'ENTREPRISE N*2____________________________________________________________________ -->
+                <fieldset>
+                    <legend>Informations de l'entreprise</legend>
+                    <div>
+                        <label for="txt-entreprise">
+                            Nom de l'entreprise ou organisation
+                            <strong>*</strong>
+                        </label>
+                        <input
+                            type="text"
+                            id="txt-entreprise"
+                            name="entreprise"
+                            maxlength="20"
+                            required
+                        />
+                    </div>
+                    <div>
+                        <label for="hours">
+                            Secteur d'activité
+                            <strong>*</strong>
+                        </label>
+                        <select id="activité" name="activité" required>
+                            <option value="">Faire un choix</option>
+                            <option value="Technologie">Technologie</option>
+                            <option value="Marketing">Marketing</option>
+                            <option value="Finance">Finance</option>
+                            <option value="Santé">Santé</option>
+                            <option value="Éducation">Éducation</option>
+                            <option value="Autre">Autre</option>
+                        </select>
+                    </div>
+                    <fieldset>
+                        <legend>Nombre de personnes</legend>
+
+                        <div>
+                            <input
+                                type="radio"
+                                id="team1"
+                                name="taille-entreprise"
+                                value="team1"
+                                required
+                            />
+                            <label for="team1">1 personne</label>
+                        </div>
+
+                        <div>
+                            <input
+                                type="radio"
+                                id="team2-10"
+                                name="taille-entreprise"
+                                value="team2-10"
+                            />
+                            <label for="team2-10">2-10</label>
+                        </div>
+
+                        <div>
+                            <input
+                                type="radio"
+                                id="team11-50"
+                                name="taille-entreprise"
+                                value="team11-50"
+                            />
+                            <label for="team11-50">11-50</label>
+                        </div>
+
+                        <div>
+                            <input
+                                type="radio"
+                                id="team51plus"
+                                name="taille-entreprise"
+                                value="team51plus"
+                            />
+                            <label for="team51plus">51 et plus</label>
+                        </div>
+                    </fieldset>
+                    <div>
+                        <label for="txt-site"> Site internet</label>
+                        <input
+                            type="text"
+                            id="txt-site"
+                            name="site"
+                            maxlength="20"
+                            placeholder="facultatf"
+                        />
+                    </div>
+                </fieldset>
+                <!-- PARAMETRE DU COMPTE N*3____________________________________________________________________ -->
+                <fieldset>
+                    <legend>Paramètres du compte</legend>
+                    <div>
+                        <label for="txt-user">
+                            Nom d'utilisateur ou pseudonyme
+                            <strong>*</strong>
+                        </label>
+                        <input
+                            type="text"
+                            id="txt-user"
+                            name="user"
+                            maxlength="20"
+                            required
+                        />
+                    </div>
+                    <div>
+                        <label for="password"
+                            >Mot de passe <strong>*</strong></label
+                        >
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            required
+                            minlength="8"
+                            pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}$"
+                            placeholder="8 caractères, 1 majuscule, 1 chiffre, 1 symbole"
+                        />
+                    </div>
+                    <div>
+                        <label for="confirmPassword"
+                            >Confirmer le mot de passe <strong>*</strong></label
+                        >
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            required
+                            placeholder="Confirmez votre mot de passe"
+                        />
+                    </div>
+                    <fieldset>
+                        <legend>Plan Choisi</legend>
+
+                        <div>
+                            <input
+                                type="radio"
+                                id="free"
+                                name="plan"
+                                value="free"
+                                required
+                            />
+                            <label for="free">GRATUIT</label>
+                        </div>
+
+                        <div>
+                            <input
+                                type="radio"
+                                id="pro"
+                                name="plan"
+                                value="pro"
+                            />
+                            <label for="pro">Pro (9.99$/mois)</label>
+                        </div>
+
+                        <div>
+                            <input
+                                type="radio"
+                                id="entreprise"
+                                name="plan"
+                                value="entreprise"
+                            />
+                            <label for="entreprise"
+                                >Entreprise (29.99$/mois)</label
+                            >
+                        </div>
+                    </fieldset>
+                    <div>
+                        <label for="ckb-liste"
+                            >J'accepte les condition d'utilisation
+                            <strong>*</strong></label
+                        >
+                        <input
+                            type="checkbox"
+                            id="ckb-liste"
+                            name="conditions"
+                            required
+                        />
+                    </div>
+                    <div>
+                        <label for="ckb-liste"
+                            >Je souhaite recevoir les nouveautés et offres par
+                            courriel
+                        </label>
+                        <input
+                            type="checkbox"
+                            id="ckb-liste"
+                            name="infolettre"
+                        />
+                    </div>
+                </fieldset>
+
+                <div class="form-submit">
+                    <input type="submit" value="envoyer" />
+                </div>
+            </fieldset>
+        </form>
     </body>
 </html>
